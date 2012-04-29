@@ -34,3 +34,5 @@ plugins=(git debian symfony ant git-flow gnu-utils pip python ssh-agent svn)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+PATH=$PATH:/usr/local/arc/arcanist/bin
+source /usr/local/arc/arcanist/resources/shell/bash-completion
