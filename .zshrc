@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="mh"
+ZSH_THEME="miloshadzic"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -15,7 +15,7 @@ ZSH_THEME="mh"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -26,13 +26,20 @@ ZSH_THEME="mh"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+# Enable ssh-agent
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent id_rsa id_rsa_ged
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian symfony ant git-flow gnu-utils pip python ssh-agent svn)
+plugins=(git debian symfony ant gnu-utils pip python ssh-agent svn dircycle fab virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-PATH=$PATH:/usr/local/arc/arcanist/bin
+PATH=$PATH:/usr/local/arc/arcanist/bin:/opt/vagrant/bin
+export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
 source /usr/local/arc/arcanist/resources/shell/bash-completion
+source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/Envs
