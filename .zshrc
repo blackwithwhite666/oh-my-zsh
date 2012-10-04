@@ -43,3 +43,4 @@ export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
 source /usr/local/arc/arcanist/resources/shell/bash-completion
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/Envs
+export PYCHARM_JDK=/usr/lib/jvm/java-1.7.0-sun-amd64
