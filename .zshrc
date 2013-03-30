@@ -37,10 +37,16 @@ plugins=(git debian symfony ant gnu-utils pip python ssh-agent svn dircycle fab 
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-PATH=$PATH:/usr/local/arc/arcanist/bin:/opt/vagrant/bin
-export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
-source /usr/local/arc/arcanist/resources/shell/bash-completion
+# Enable rvm
+source ~/.rvm/scripts/rvm
+export PATH=$PATH:$HOME/.rvm/bin
+
+# Enable venv wrapper
 source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=$HOME/Envs
-export PYCHARM_JDK=/usr/lib/jvm/java-1.7.0-sun-amd64
+export WORKON_HOME=$HOME/Work/.envs
+
+# Specify oracle instance client directory
+export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
+
+# Enable pythonz
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
