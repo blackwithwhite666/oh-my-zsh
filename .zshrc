@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="miloshadzic"
+ZSH_THEME="avit"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -33,7 +33,7 @@ zstyle :omz:plugins:ssh-agent id_rsa id_rsa_ged
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian symfony ant gnu-utils pip python ssh-agent svn dircycle fab virtualenvwrapper)
+plugins=(git debian ant gnu-utils pip python ssh-agent svn dircycle fab)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,11 +42,11 @@ source ~/.rvm/scripts/rvm
 export PATH=$PATH:$HOME/.rvm/bin
 
 # Enable venv wrapper
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 export WORKON_HOME=$HOME/Work/.envs
-
-# Specify oracle instance client directory
-export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
 
 # Enable pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+
+# Set go path
+export GOPATH=$HOME/go
